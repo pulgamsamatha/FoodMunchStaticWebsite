@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Food Munch</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">Food<span>Munch</span></a>
+      <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="mainNav">
+        <span class="sr-only">Open menu</span>
+        ☰
+      </button>
+      <nav id="mainNav" class="nav">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Delicious food — delivered to your door</h1>
+          <p>Fresh ingredients. Bold flavors. Made with love.</p>
+          <a href="#menu" class="btn primary">See Menu</a>
+        </div>
+        <div class="hero-images">
+          <img src="images/food1.jpg" alt="Assorted food" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="section container">
+      <header class="section-header">
+        <h2>Popular Menu</h2>
+        <p>Hand-picked dishes our customers love</p>
+      </header>
+
+      <div class="grid cards">
+        <article class="card">
+          <button class="card-image-btn" data-img="images/food1.jpg" aria-label="View Food 1">
+            <img src="images/food1.jpg" alt="Spicy noodles" loading="lazy">
+          </button>
+          <div class="card-body">
+            <h3>Spicy Noodles</h3>
+            <p>Wok-tossed noodles with crisp veggies and spicy sauce.</p>
+            <div class="card-footer">
+              <span class="price">₹199</span>
+              <button class="btn small add">Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <button class="card-image-btn" data-img="images/food2.jpg" aria-label="View Food 2">
+            <img src="images/food2.jpg" alt="Cheesy pizza" loading="lazy">
+          </button>
+          <div class="card-body">
+            <h3>Cheesy Pizza</h3>
+            <p>Thin crust pizza loaded with mozzarella and toppings.</p>
+            <div class="card-footer">
+              <span class="price">₹349</span>
+              <button class="btn small add">Add</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <button class="card-image-btn" data-img="images/food3.jpg" aria-label="View Food 3">
+            <img src="images/food3.jpg" alt="Fresh salad" loading="lazy">
+          </button>
+          <div class="card-body">
+            <h3>Fresh Salad</h3>
+            <p>Seasonal greens, cherry tomatoes and tangy dressing.</p>
+            <div class="card-footer">
+              <span class="price">₹149</span>
+              <button class="btn small add">Add</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="section alt-bg">
+      <div class="container">
+        <h2>About FoodMunch</h2>
+        <p>We are a small team passionate about bringing tasty, honest food to your table. Local produce and simple recipes.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2>Contact</h2>
+      <form id="contactForm" class="contact-form" action="#" onsubmit="return false;">
+        <label>
+          Name
+          <input type="text" name="name" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="4" required></textarea>
+        </label>
+        <button class="btn primary" type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> FoodMunch. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
+    <button id="lbClose" class="lb-close" aria-label="Close preview">✕</button>
+    <img id="lbImage" src="" alt="">
+  </div>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
